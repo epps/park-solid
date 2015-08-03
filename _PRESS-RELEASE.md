@@ -17,19 +17,23 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > ParkSolid. 
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Bringing accurate, up-to-date parking information from drivers like you.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > When Waze gives you an arrival estimate, it isn't taking parking into account. ParkSolid gives drivers a platform to add timely parking information to maps so that parking on arrival isn't guess and check. Need to know where permitted zones end and when street sweeping is? ParkSolid does you a solid by providing that information before you hop in the car. 
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Parkopedia covers a lot of paid parking information, but doesn't really address neighborhood parking. So when you head over to your friend's new place for the first time, you've got only a couple of options to get a handle on the parking situation in advance: 
+  * Use Google StreetView and pray the signs are legible
+  * Ask your friend to create a Google Map of prime parking real estate in her area
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > ParkSolid lets users add parking info to maps of their areas so that friends and family don't circle needlessly when visiting. This same feature makes it easy for business with no dedicated onsite parking to direct customers to the most convenient parking locations nearby. 
+
+  > By creating markers and annotating their info boxes, users can quickly generate local parking information that's easily shareable and makes it easier to plan trips once Waze 
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.

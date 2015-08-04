@@ -27,7 +27,7 @@
           lat: options.lat,
           lng: options.lng
         };
-         return marker = this._createMarker(options);
+        marker = this._createMarker(options);
 
         if(options.event) {
           this._on({
@@ -41,13 +41,15 @@
           this._on({
             obj: marker,
             event: 'click',
-            callback: function() {
+            callback: function(e) {
               var infoWindow = new google.maps.InfoWindow({ content: options.content });
               infoWindow.open(this.gMap, marker);
             }
           });
         }
+        return marker;
       },
+
       _createMarker: function(options) {
         options.map = this.gMap;
         return new google.maps.Marker(options); 

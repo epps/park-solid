@@ -30,7 +30,7 @@
     coordinates.push(e.latLng);
     clickCount++;
     if (clickCount === 2) {
-      window.polylines[polyLineCount++] = {
+      window.polylines[polyLineCount] = {
         parkMarker: parksolid.addMarker({
           lat: e.latLng.G,
           lng: e.latLng.K,
@@ -47,6 +47,14 @@
           id: 1
         })
       }
+      google.maps.event.addListener(polylines[polyLineCount].parkMarker, 'click', function(e) {
+      var content = prompt("What's the parking like here?");
+      var infoWind = new google.maps.InfoWindow({
+        content: '<span><strong>Parking info:</strong> '+ content + '</span>'
+      });
+      infoWind.open(ParkSolid.gMap, polylines[0].parkMarker);
+      });
+      polyLineCount++;
       clickCount = 0;
       coordinates = []; 
     }
@@ -57,6 +65,7 @@
     var stAddress = $('#st-name');
     var parkingInfo = $('#parking-info');
     var parkingNotes = parkingInfo.val();
+
     geocode({
       address: stAddress.val(),
       success: function(results) {
@@ -65,7 +74,7 @@
           lat: result.geometry.location.lat(),
           lng: result.geometry.location.lng(),
           icon: 'parking.png',
-          content: '<span>Parking info: '+ parkingNotes + '</span>'
+          content: '<span><strong>Parking info:</strong> '+ parkingNotes + '</span>'
         });
       },
       error: function(status) {

@@ -19,7 +19,7 @@
         google.maps.event.addListener(options.obj, options.event, function(e) {
           options.callback.call(self, e);
         });
-      }, 
+      },
 
       addMarker: function(options) {
         var marker;
@@ -27,7 +27,7 @@
           lat: options.lat,
           lng: options.lng
         };
-        marker = this._createMarker(options);
+         return marker = this._createMarker(options);
 
         if(options.event) {
           this._on({
@@ -48,11 +48,26 @@
           });
         }
       },
-
       _createMarker: function(options) {
         options.map = this.gMap;
         return new google.maps.Marker(options); 
+      },
+
+      addPolyLine: function(options) {
+        var polyLine;
+        path = options.path;
+        strokeColor = options.strokeColor;
+        strokeOpacity = options.strokeOpacity;
+        strokeWeight = options.strokeWeight;
+        id: options.id;
+        return polyLine = this._createPolyline(options);
+      },
+
+      _createPolyline: function(options) {
+        options.map = this.gMap;
+        return new google.maps.Polyline(options);
       }
+
     }
   }());
 

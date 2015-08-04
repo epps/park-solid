@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ParkSolid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="geocode-info">
+    <input id="st-name" type="text" placeholder="Street Name">
+    <input id="parking-info" type="text" placeholder="Parking Info">
+    <button action="submit">Button</button>
+  </form>
+
+  <div id="map-canvas"></div>
+
+  <!-- scripts -->
+  <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="lib/jqueryui/jquery-ui.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="ParkSolid.js"></script>
+  <script src="map-options.js"></script>
+  <!-- <script src="jqueryui.parksolid.js"></script> -->
+  <script src="script.js"></script>
+
+</body>
+</html>

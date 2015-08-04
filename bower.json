@@ -1,0 +1,20 @@
+{
+  "name": "ParkSolid",
+  "main": "script.js",
+  "version": "0.0.0",
+  "authors": [
+    "Erik Eppel <eceppel@gmail.com>"
+  ],
+  "description": "ParkSolid gives drivers a platform to add timely parking information to maps so that parking on arrival isn't guess and check.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

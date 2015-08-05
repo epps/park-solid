@@ -63,9 +63,11 @@
   $('#geocode-info').submit(function(e) {
     e.preventDefault();
     var stAddress = $('#st-name');
-    var parkingInfo = $('#parking-info');
-    var parkingNotes = parkingInfo.val();
-
+    var meter = $('#meter');
+    var free = $('#free');
+    var limit = $('#limit');
+    var parkingNotes = '<div><span><strong>Parking Info For: </strong>'+ stAddress.val() +'</span><br><span><strong>Metered Parking: </strong>'+ meter.val() +'</span><br><span><strong>Free Parking: </strong>'+ free.val() +'</span><br><span><strong>Time Limits: </strong>'+ limit.val() +'</span><br></div>';
+    console.log(parkingNotes);
     geocode({
       address: stAddress.val(),
       success: function(results) {
@@ -74,7 +76,7 @@
           lat: result.geometry.location.lat(),
           lng: result.geometry.location.lng(),
           icon: 'parking.png',
-          content: '<span><strong>Parking info:</strong> '+ parkingNotes + '</span>'
+          content: parkingNotes
         });
       },
       error: function(status) {
@@ -82,7 +84,9 @@
       }
     });
     stAddress.val("");
-    parkingInfo.val("");
+    meter.val("");
+    free.val("");
+    limit.val("");
   });
 
 }(window, window.ParkSolid, jQuery));

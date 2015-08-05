@@ -1,14 +1,34 @@
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+
 html {
   height: 100%;
 }
 
 body {
+  background-color: #FADAF2;
   height: 100%;
   padding: 0;
 }
 
 #map-canvas {
   height: 70%;
-  width: 70%;
+  width: 90%;
   margin: 50px auto;
+  border: 1px solid #EEA9DD;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+h1 {
+  font-size: 55px;
+}
+
+hr {
+  border-color: #EEA9DD;
 }

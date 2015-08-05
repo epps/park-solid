@@ -3,22 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>ParkSolid</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <form id="geocode-info">
-    <input id="st-name" type="text" placeholder="Street Name">
-    <input id="meter" type="text" placeholder="Metered Parking">
-    <input id="free" type="text" placeholder="Free Parking">
-    <input id="limit" type="text" placeholder="Time Limit">
-    <button action="submit">Button</button>
-  </form>
-
+  <div class="container">
+    <header>
+      <h1>ParkSolid<span class="glyphicon glyphicon-map-marker"></span></h1>
+    </header>
+    <hr>
+  </div>
+  <div class="container">
+    <form class="form-inline" id="geocode-info">
+      <div class="form-group">
+        <!-- <label for="st-name" class="control-label">Address</label> -->
+        <input id="st-name" type="text" placeholder="Street Name">
+      </div> <!-- st-name -->
+        <!-- <label for="meter" class="control-label">Paid Parking</label> -->
+      <div class="form-group">
+        <input id="meter" type="text" placeholder="Metered Parking">
+      </div> <!-- meter -->
+        <!-- <label for="free" class="control-label">Free Parking</label> -->
+      <div class="form-group">
+        <input id="free" type="text" placeholder="Free Parking">
+      </div> <!-- free -->
+        <!-- <label for="limit" class="control-label">Time Limits</label> -->
+      <div class="form-group">
+        <input id="limit" type="text" placeholder="Time Limit">
+      </div> <!-- free parking -->
+      <button type="submit" class="btn btn-primary" action="submit">Button</button>
+    </form>
+  </div>
+  <!-- MAP CANVAS -->
   <div id="map-canvas"></div>
+
 
   <!-- scripts -->
   <script src="lib/jquery/dist/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   <script src="ParkSolid.js"></script>
   <script src="map-options.js"></script>
